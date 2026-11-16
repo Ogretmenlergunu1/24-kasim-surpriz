@@ -543,7 +543,7 @@ scene.add(finalPaintingGroup);
 
 // Kasımpatılar görseli
 const finalPaintingTexture = new THREE.TextureLoader().load(
-  '/kasimpatilar.png'
+  `${import.meta.env.BASE_URL}kasimpatilar.png`
 );
 
 finalPaintingTexture.colorSpace = THREE.SRGBColorSpace;
@@ -736,7 +736,7 @@ scene.add(thirdPaintingGroup);
 
 // Tablo görseli
 const thirdTexture = new THREE.TextureLoader().load(
-  '/ucuncu-tablo.png'
+  `${import.meta.env.BASE_URL}ucuncu-tablo.png`
 );
 
 thirdTexture.colorSpace = THREE.SRGBColorSpace;
@@ -804,7 +804,7 @@ scene.add(fourthPaintingGroup);
 
 // Dördüncü tablonun görseli
 const fourthTexture = new THREE.TextureLoader().load(
-  '/dorduncu-tablo.png'
+  `${import.meta.env.BASE_URL}dorduncu-tablo.png`
 );
 
 fourthTexture.colorSpace = THREE.SRGBColorSpace;
@@ -955,8 +955,9 @@ plaque.position.set(0, 1.15, -1.63);
 scene.add(plaque);
 
  // İlk tablomuzun görselini yüklüyoruz
+// İlk tablomuzun görselini yüklüyoruz
 const paintingTexture = new THREE.TextureLoader().load(
-  '/ilk-tablo.png'
+  `${import.meta.env.BASE_URL}ilk-tablo.png`
 );
 
 // Görselin renklerini doğru gösteriyoruz
@@ -1101,8 +1102,9 @@ secondFrameGroup.rotation.y = -Math.PI / 2;
 scene.add(secondFrameGroup);
 
 // İkinci tablonun görseli
+
 const secondTexture = new THREE.TextureLoader().load(
-  '/ikinci-tablo.png'
+  `${import.meta.env.BASE_URL}ikinci-tablo.png`
 );
 
 secondTexture.colorSpace = THREE.SRGBColorSpace;
@@ -1626,7 +1628,7 @@ inspectButton.addEventListener('click', () => {
 
   if (currentArtwork === 0) {
     // Birinci eser
-    detailImage.src = '/ilk-tablo.png';
+    detailImage.src = `${import.meta.env.BASE_URL}ilk-tablo.png`;
     detailImage.alt = 'Bir Hikâyenin Başlangıcı';
 
     detailTitle.textContent = 'Bir Hikâyenin Başlangıcı';
@@ -1639,7 +1641,7 @@ inspectButton.addEventListener('click', () => {
 
   } else if (currentArtwork === 1) {
     // İkinci eser
-    detailImage.src = '/ikinci-tablo.png';
+    detailImage.src = `${import.meta.env.BASE_URL}ikinci-tablo.png`;
     detailImage.alt = 'Bir Işığın Ardından';
 
     detailTitle.textContent = 'Bir Işığın Ardından';
@@ -1657,7 +1659,7 @@ inspectButton.addEventListener('click', () => {
 
   } else if (currentArtwork === 2) {
     // Üçüncü eser — Bir İz Bırakmak
-    detailImage.src = '/ucuncu-tablo.png';
+    detailImage.src = `${import.meta.env.BASE_URL}ucuncu-tablo.png`;
     detailImage.alt = 'Bir İz Bırakmak';
 
     detailTitle.textContent = 'Bir İz Bırakmak';
@@ -1675,7 +1677,7 @@ inspectButton.addEventListener('click', () => {
 
   } else if (currentArtwork === 3) {
     // Dördüncü eser — Görünmeyen Emek
-    detailImage.src = '/dorduncu-tablo.png';
+    detailImage.src = `${import.meta.env.BASE_URL}dorduncu-tablo.png`;
     detailImage.alt = 'Görünmeyen Emek';
 
     detailTitle.textContent = 'Görünmeyen Emek';
@@ -1693,7 +1695,7 @@ inspectButton.addEventListener('click', () => {
 
   } else if (currentArtwork === 4) {
     // Beşinci ve son eser — Kasımpatılar
-    detailImage.src = '/kasimpatilar.png';
+    detailImage.src = `${import.meta.env.BASE_URL}kasimpatilar.png`;
     detailImage.alt = 'Kasımpatılar';
 
     detailTitle.textContent = 'Kasımpatılar';
